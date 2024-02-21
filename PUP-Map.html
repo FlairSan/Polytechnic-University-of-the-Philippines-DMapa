@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <title>Polytechnic University Map</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        
+    </head>
+    <body>
+        <div class = "Container">
+            <div class="header">
+                <div class="logo">
+                    <img src="image/Logo.png" alt="" height="100px" width="100px">
+                </div>
+                <div class="name">
+                    P<span>OLYTECHNIC</span> U<span>NIVERSITY</span> O<span>F</span> T<span>HE</span> P<span>HILIPPINES</span>
+                </div>
+            </div>
+            
+            <div class="Map">
+                <p class="type">D. Mapa: PUP A. Mabini Campus</p>
+                <br>
+                <img src="image/main.gif" alt="" height="729" width="1217" text-allign="center" usemap="#Map">
+                <map name="Map">
+                    <area shape="rect" id = "pool" coords="683,56, 798,115">
+                    <area shape="circle" id = "chapel" coords="637,603,63" >
+                    <area shape="circle" id = "oval" coords="930,528,87" >
+                    <area shape="poly" id = "main" coords="474,461,496,463,617,395,653,458,535,525,519,550,523,688,448,688,446,552,431,524,311,458,352,395">
+                    <area shape="poly" id = "charlie" coords="233,205,363,283,338,325,208,247" >
+                    <area shape="circle" id = "lagoon" coords="541,309,54" >
+                    <area shape="poly" id = "canteen" coords="295,314,328,331,314,357,280,338">
+                    <area shape="circle" id = "labhigh" coords="256,125,64" >
+                </map>
+
+                <div class = "box" id="poolbox">
+                    <img src="image/pool.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Pool</h1>
+                    One of the sport facilities of PUP. It is an olympic-sized swimming pool that is capable of handling several swimming classes 
+                        and student athlete activities simultaneously
+                </div>
+
+                <div class = "box" id="chapelbox">
+                    <img src="image/chapel.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Chapel</h1>
+                    The Ecumenical Chapel also known as the Interfaith Chapel is a nondenominational Christian church and it is the only Religious Facility of PUP A. Mabini Campus. 
+                    It is for students and faculty members of different faith
+                </div>
+
+                <div class = "box" id="ovalbox">
+                    <img src="image/oval.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Oval</h1>
+                    The Track and Field Oval also known as the Oval is a lawn and an atheletics track. It is one of the sport facilities of PUP
+                </div>
+
+                <div class = "box" id="mainbox">
+                    <img src="image/main.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Main Building</h1>
+                    The main academic building of PUP A. Mabini Campus
+                </div>
+
+                <div class = "box" id="charliebox">
+                    <img src="image/charlie.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Charlie Building</h1>
+                    A structure dedicated to the first victim of the Marcos Regime named Charlie Del Rosario. An activist and desaparacido, he advocated rights for the oppressed.
+                </div>
+
+                <div class = "box" id="lagoonbox">
+                    <img src="image/lagoon.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Lagoon</h1>
+                    A mossy creek with trees which is a relaxing and waiting area for students while waiting for their next class. It is recently renovated
+                </div>
+
+                <div class = "box" id="canteenbox">
+                    <img src="image/canteen.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Canteen</h1>
+                    A place that serves food for the students of PUP A. Mabini Campus.
+                </div>
+
+                <div class = "box" id="labhighbox">
+                    <img src="image/labhigh.jpg" height="200px" width="300px">
+                    <br>
+                    <h1 class="FacName">Laboratory Highschool</h1>
+                    One of the premier high school in Manila
+                </div>
+                <br>
+
+                <p class="type">About:</p>
+                <p>D. Mapa (Pronounced as "The Mapa") is a PUP map system created by the students of PUP. Hover your mouse over the names of the places to see
+                    the information surrounding the building of Polytechnic University of the Philippines A. Mabini Campus. 
+                </p>
+            </div>
+
+            <div class="footer">
+                Copyright © 2023 Polytechnic University of the Philippines D. Mapa<br>
+                Contact No.: (+63 2) 5335-1787 or 5335-1777<br>
+                Email: <a href="inquire@pup.edu.ph">inquire@pup.edu.ph</a><br>
+                All rights reserved
+            </div>
+        </div>
+        
+        <script>
+            let x = undefined
+            let y = undefined
+            let xoverflow = undefined
+            let yoverflow = undefined
+            window.addEventListener('mousemove',function(e){
+                x= e.pageX;
+                y= e.pageY;
+                xoverflow= window.innerWidth - e.clientX
+                yoverflow= window.innerHeight - e.clientY 
+            })
+
+            var FacPool = document.getElementById("pool")
+            var FacChapel = document.getElementById("chapel")
+            var FacOval = document.getElementById("oval")
+            var FacMain = document.getElementById("main")
+            var FacCharlie = document.getElementById("charlie")
+            var FacLagoon = document.getElementById("lagoon")
+            var FacCanteen = document.getElementById("canteen")
+            var FacLabhigh= document.getElementById("labhigh")
+
+            FacPool.onmouseover = function(){
+                var DivID = document.getElementById("poolbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacPool.onmouseout = function(){
+                var DivID = document.getElementById("poolbox");
+                DivID.style.display = "none";
+            }
+
+            FacChapel.onmouseover = function(){
+                var DivID = document.getElementById("chapelbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacChapel.onmouseout = function(){
+                var DivID = document.getElementById("chapelbox");
+                DivID.style.display = "none";
+            }
+
+            FacOval.onmouseover = function(){
+                var DivID = document.getElementById("ovalbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacOval.onmouseout = function(){
+                var DivID = document.getElementById("ovalbox");
+                DivID.style.display = "none";
+            }
+
+            FacMain.onmouseover = function(){
+                var DivID = document.getElementById("mainbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacMain.onmouseout = function(){
+                var DivID = document.getElementById("mainbox");
+                DivID.style.display = "none";
+            }
+
+            FacCharlie.onmouseover = function(){
+                var DivID = document.getElementById("charliebox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacCharlie.onmouseout = function(){
+                var DivID = document.getElementById("charliebox");
+                DivID.style.display = "none";
+            }
+
+            FacLagoon.onmouseover = function(){
+                var DivID = document.getElementById("lagoonbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacLagoon.onmouseout = function(){
+                var DivID = document.getElementById("lagoonbox");
+                DivID.style.display = "none";
+            }
+
+            FacCanteen.onmouseover = function(){
+                var DivID = document.getElementById("canteenbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacCanteen.onmouseout = function(){
+                var DivID = document.getElementById("canteenbox");
+                DivID.style.display = "none";
+            }
+
+            FacLabhigh.onmouseover = function(){
+                var DivID = document.getElementById("labhighbox");
+                DivID.style.display = "block";
+                if (xoverflow > 330)
+                    DivID.style.left= x + 10
+                else
+                    DivID.style.left= x - 330
+                if (yoverflow > 510)
+                    DivID.style.top= y + 10
+                else
+                    DivID.style.top= y - 510
+            }
+
+            FacLabhigh.onmouseout = function(){
+                var DivID = document.getElementById("labhighbox");
+                DivID.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

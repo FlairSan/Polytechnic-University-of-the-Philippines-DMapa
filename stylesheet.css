@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    background-image: radial-gradient(RGB(255,255,255,0.75),RGB(255,255,255,1)),url(image/PUP.jpg);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 10%,90%,10%;
+    grid-template-rows: 150px 1fr 110px;
+}
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(240,128,128,1));
+    padding-top: 10px; 
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    margin: 0px;
+    padding-left: 30px;
+}
+
+.header span{
+    font-size: 40px;
+}
+
+.name{
+    padding-left: 30px;
+    padding-top: 20px;
+    color: maroon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: maroon;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    padding-top: 10px;
+    color: gainsboro;
+}
+
+.map p{
+    text-align: left;
+}
+
+.map{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    text-align: center;
+    grid-row-end: 3;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    margin: 30px; 
+}
+
+.type{
+    font-size: 40px;
+    color: maroon;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.box{
+    display: none;
+    height: 500px;
+    width: 320px;
+    top:100px;
+    left:100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius: 1px;
+    position: absolute;
+    border: 3px solid maroon;
+    background-color: aliceblue;
+    text-indent: 0px;
+}
+
+.FacName{
+    text-indent: 0px;
+    margin: -3px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: maroon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body p{
+    font-size: 15px; 
+    text-align: left;
+    padding-left: 50px;
+}
